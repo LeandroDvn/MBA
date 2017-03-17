@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BigData.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .MenuItem {
+            float: left;
+            color: white;
+            width: 290px;
+        }
+        .MenuItem a {
+                color: white;
+                vertical-align: -webkit-baseline-middle;
+            }
+        #cabeçalho {
+            padding-left: 158px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="cabeçalho" style="height: 30px; background-color: cadetblue">
+            <div class="MenuItem"><a href="/Graficos/Quantidade.aspx">Mais Vendidos</a></div>
+            <div class="MenuItem"><a href="/Graficos/Vendas.aspx">Valor de Venda</a></div>
+            <div class="MenuItem"><a href="/Graficos/Custo.aspx">Por Custo</a></div>
+            <div class="MenuItem"><a href="/Graficos/Todos.aspx">Todos os Produtos</a></div>
+        </div>
+        <div style="margin-top: 2px">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder></div>
+            </div>
+    </form>
+</body>
+</html>
